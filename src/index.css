@@ -1,0 +1,108 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THE ABOVE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: 204.0000 12.1951% 91.9608%;
+  --foreground: 0 0% 12%; /* Darkened for better contrast */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 12%; /* Darkened for better contrast */
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 12%; /* Darkened for better contrast */
+  --primary: 210 80% 50%; /* Adjusted for better contrast */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220.0000 14.2857% 95.8824%;
+  --secondary-foreground: 215 25% 27%; /* Darkened for better contrast */
+  --muted: 210 20.0000% 98.0392%;
+  --muted-foreground: 220 15% 40%; /* Darkened for better contrast */
+  --accent: 207.6923 46.4286% 89.0196%;
+  --accent-foreground: 224.4444 70% 30%; /* Darkened for better contrast */
+  --destructive: 0 84.2365% 50%; /* Adjusted for better contrast */
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 9.3750% 80%; /* Darkened for better contrast */
+  --input: 220 15.7895% 96.2745%;
+  --ring: 210 80% 50%; /* Adjusted to match primary */
+  --chart-1: 210 55% 55%; /* Adjusted for better contrast */
+  --chart-2: 12.9032 73.2283% 65%; /* Adjusted for better contrast */
+  --chart-3: 213.1579 40% 45%; /* Adjusted for better contrast */
+  --chart-4: 216.9231 45% 38%; /* Adjusted for better contrast */
+  --chart-5: 221.0127 55% 30%; /* Adjusted for better contrast */
+  --sidebar: 216 7.9365% 87.6471%;
+  --sidebar-foreground: 0 0% 12%; /* Darkened for better contrast */
+  --sidebar-primary: 210 80% 50%; /* Adjusted to match primary */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 207.6923 46.4286% 89.0196%;
+  --sidebar-accent-foreground: 224.4444 70% 30%; /* Adjusted to match accent-foreground */
+  --sidebar-border: 220 13.0435% 80%; /* Darkened for better contrast */
+  --sidebar-ring: 210 80% 50%; /* Adjusted to match primary */
+  --font-sans: Inter, sans-serif;
+  --font-serif: Source Serif 4, serif;
+  --font-mono: JetBrains Mono, monospace;
+  --radius: 0.75rem;
+  --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 4px 6px -1px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+/* Apply Inter font to the entire application */
+html, body {
+  font-family: var(--font-sans);
+}
+
+:root[class~="dark"] {
+  --background: 220 50% 8%;
+  --foreground: 0 0% 98%;
+  --card: 222 47% 11%;
+  --card-foreground: 0 0% 98%;
+  --popover: 222 45% 7%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 210 75% 65%; /* Brightened for better contrast in dark mode */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 222 30% 12%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 222 30% 12%;
+  --muted-foreground: 0 0% 80%; /* Brightened for better contrast in dark mode */
+  --accent: 224 40% 20%;
+  --accent-foreground: 213 97% 90%;
+  --destructive: 0 90% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 224 40% 25%; /* Brightened for better contrast in dark mode */
+  --input: 224 40% 20%;
+  --ring: 210 75% 65%; /* Adjusted to match primary */
+  --chart-1: 210 80% 70%; /* Brightened for better contrast in dark mode */
+  --chart-2: 12 85% 75%; /* Brightened for better contrast in dark mode */
+  --chart-3: 213 70% 55%; /* Brightened for better contrast in dark mode */
+  --chart-4: 217 70% 48%; /* Brightened for better contrast in dark mode */
+  --chart-5: 221 75% 40%; /* Brightened for better contrast in dark mode */
+  --sidebar: 222 47% 11%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 210 75% 65%; /* Adjusted to match primary */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 224 40% 20%;
+  --sidebar-accent-foreground: 213 97% 90%;
+  --sidebar-border: 224 40% 25%; /* Brightened for better contrast in dark mode */
+  --sidebar-ring: 210 75% 65%; /* Adjusted to match primary */
+  --font-sans: Inter, sans-serif;
+  --font-serif: Source Serif 4, serif;
+  --font-mono: JetBrains Mono, monospace;
+  --radius: 0.75rem;
+  --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.15);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.15);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 1px 2px -1px hsl(0 0% 0% / 0.20);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 1px 2px -1px hsl(0 0% 0% / 0.20);
+  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 2px 4px -1px hsl(0 0% 0% / 0.20);
+  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 4px 6px -1px hsl(0 0% 0% / 0.20);
+  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 8px 10px -1px hsl(0 0% 0% / 0.20);
+  --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.35);
+}
